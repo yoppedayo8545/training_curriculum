@@ -18,12 +18,9 @@ class CalendarsController < ApplicationController
     params.require(:plan).permit(:date, :plan)
   end
 
-<<<<<<< HEAD
-  def get_week
-=======
 
-  def getWeek
->>>>>>> 3915034f63f9010ef008d1b4cce1f98fd9f6109c
+  def get_week
+
     @wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
 
   def get_week
@@ -49,15 +46,7 @@ class CalendarsController < ApplicationController
             wday_num -= 7 
           end
         
-<<<<<<< HEAD
       days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday: @wdays[wday_num]}
-=======
-      days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :plans => today_plans, :wday => @wdays[wday_num]}
-
-      end
-      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans}
-
->>>>>>> 3915034f63f9010ef008d1b4cce1f98fd9f6109c
       @week_days.push(days)
     end
 
